@@ -1,0 +1,20 @@
+Each Process has it's own Virtual address space.
+
+Frok()
+    -- Copies all the data from the parent Virtual address space.
+    -- Returns an intager.
+    -- < 0 means that the fork failed.
+    -- if successful, value will be 0 in child process, and value will be the child's process ID for the parent process
+
+Process Control Block
+    -- Holds the information about a process.
+
+execvp()
+    -- Creates a new process, erasing all the data that was there before. For example, if it is a child that created a copy of the prrocess then it will erase all the data it coppied and start the new process.
+
+
+
+Going to use gets for getting info from user.
+When we submit the assignment we will zip the whole xv6 folder.
+program should be prog02.c
+Will have to add make information to the makefile
