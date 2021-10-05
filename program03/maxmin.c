@@ -1,5 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
+ * Anthony Bahl
+ * Homework Assignment 3
+ * Maxmin.c
+ * 10/3/2021
+ * Calculates the maximum and minimum values of a data file.
+ */
 #include <unistd.h>
 #include <time.h>
 
