@@ -5,6 +5,8 @@
  * 10/3/2021
  * Calculates the maximum and minimum values of a data file.
  */
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
 
