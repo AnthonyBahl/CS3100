@@ -1,0 +1,17 @@
+System call will trigger an interrupt to the CPU.
+
+Interrupt -> Leave User Mode -> Enter Kernal Mode -> Jump to Interrupt Routine Code -> Come back to same location -> Leave Kernal Mode -> Enter User Mode -> Proceed.
+
+interrupt(#)
+Interrupt Vector Table: Tells you the address where the code for your exception is stored.
+
+
+From "How to make System Calls" on Canvas:
+syscall.h - Define each new system call. Give a unique number.
+syscall.c - Pointers to functions. 
+sysproc.c - Implementation of the system calls
+user.S - The interface to the system calls that the user can use.
+user.h - Holds the functioin type information which a user would call.
+
+
+#include "types.h"
