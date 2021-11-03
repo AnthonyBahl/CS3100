@@ -15,3 +15,8 @@ user.h - Holds the functioin type information which a user would call.
 
 
 #include "types.h"
+
+
+
+grep argint()
+grep argstr()
