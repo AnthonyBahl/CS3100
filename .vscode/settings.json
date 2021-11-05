@@ -4,6 +4,7 @@
         "types.h": "c",
         "stat.h": "c",
         "*.tcc": "cpp",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "stdlib.h": "c"
     }
 }
