@@ -1,0 +1,28 @@
+﻿Anthony Bahl
+Program 5 part 2
+11/15/2021
+W01113559
+How to Implement a Priority Scheduler in XV6
+
+        There are two functionalities that are not currently available in XV6 that would need to be implemented:
+
+1. A call that prints current process states
+2. A call that can change priority of a process
+
+
+        In order to do both of these things we would need to be able to access the processes state and priority. In XV6 the process object does have a state variable already, however it does not have a built in priority variable. So we would need to be able to add that in the proc.h file in order to begin modifying process priority. In order to make sure that every process has a priority, you’ll need to make sure that they get assigned one by default when they’re created. You can do this by assigning default values for new processes in proc.c and defaults for child processes in exec.c
+
+
+Once you’ve done that you can start to create the system calls that will implement the aforementioned functionalities.
+
+
+For the first (A call that prints current process states) you just need to loop through the process table and get the current state of each process. You’ll want to make sure that you lock the process before you loop over the table as well, or something can change while you’re creating the table! Especially if you have more than one CPU.
+
+
+For the second (A call that can change priority of a process) you go through a similar process where you’ll loop over the table, but instead of handling each process you can just find the process ID you’re looking for, update the priority, and then return.
+
+
+Now you have all the components you need to create a priority scheduler! We’ve added a priority variable, a way to modify that variable and a way to see all of our processes so we can make those decisions. But wait, now how do we get the system to care about this silly number that we threw into the process? From it’s perspective it’s just another number that has no meaning to it. In order to actually have the priority numbers mean something you have to modify the scheduler function in the proc.c file. 
+
+
+In theory you could implement any scheduling algorithm that you want, or even create your own!
