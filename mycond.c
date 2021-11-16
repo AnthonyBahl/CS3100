@@ -23,5 +23,5 @@ int main() {
 
     printf("Proces ID:$ld\n", getpid());
 
-    pthread_mutex()
+    pthread_mutex();
 }
